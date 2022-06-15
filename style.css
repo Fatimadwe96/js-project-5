@@ -1,0 +1,121 @@
+:root {
+    --player-main-color: lightgreen;
+    --computer-main-color: palevioletred;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.logo {
+    height: 96px;
+}
+
+.logo img {
+    height: 96px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    background-color: cadetblue;
+}
+
+section.main {
+    margin: auto;
+    max-width: 600px;
+}
+
+.card {
+    margin: 32px auto;
+}
+
+.card .card-title {
+    font-size: 32px;
+    text-align: center;
+    color: var(--player-main-color);
+    border: 1px solid var(--player-main-color);
+    padding: 4px;
+}
+
+.card .card-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.card-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid gray;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.card-item.selected {
+    background-color: var(--player-main-color);
+}
+
+.card .card-item .img {
+    height: 64px;
+    border-radius: 50%;
+}
+
+.card .card-item [name="choice"] {
+    display: none;
+}
+
+.card.player {
+    margin-bottom: 32px;
+}
+
+.card.computer .card-title {
+    color: var(--computer-main-color);
+    border: 1px solid var(--computer-main-color);
+}
+.card.computer .card-item:hover,
+.card.computer .card-item .img:hover {
+    cursor: not-allowed;
+}
+.card.computer .card-item.selected {
+    background-color: var(--computer-main-color);
+}
+.result {
+    margin-top: 64px;
+    text-align: center;
+    color: blue;
+}
+
+.btn-newgame {
+    width: 140px;
+    height: 45px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+.btn-newgame:hover {
+    background-color: #2EE59D;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+.winner {
+    display: flex;
+    justify-content: center;
+}
